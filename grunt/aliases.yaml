@@ -1,0 +1,72 @@
+development:
+    description: 'Development build task'
+    tasks:
+        - 'clean:dist'
+        - 'lint'
+        - 'sass:development'
+        - 'postcss:cssDevelopment'
+        - 'copy:js'
+        - 'nunjuckr:development'
+
+dev:
+    description: 'Shortcut für development task'
+    tasks:
+        - 'development'
+
+production:
+    description: 'Production build task'
+    tasks:
+        - 'clean:dist'
+        - 'sass:production'
+        - 'postcss:cssProduction'
+        - 'requirejs:production'
+        - 'nunjuckr:production'
+
+prod:
+    description: 'Shortcut für production task'
+    tasks:
+        - 'production'
+
+stylesDevelopment:
+    description: 'Build development CSS files'
+    tasks:
+        - 'sass:development'
+        - 'postcss:cssDevelopment'
+
+stylesDev:
+    description: 'Shortcut for stylesDevelopment task'
+    tasks:
+        - 'stylesDevelopment'
+
+stylesProduction:
+    description: 'Build production CSS files'
+    tasks:
+        - 'sass:production'
+        - 'postcss:cssProduction'
+
+stylesProd:
+    description: 'Shortcut for stylesProduction task'
+    tasks:
+        - 'stylesProduction'
+
+lint:
+    description: 'Linting task for development'
+    tasks:
+        - 'stylelint:scss'
+        - 'jshint:grunt'
+        - 'jscs:grunt'
+        - 'jshint:frontend'
+        - 'jscs:frontend'
+
+lint_ci:
+    description: 'Linting task for the CI server'
+    tasks:
+        - 'stylelint:ci'
+        - 'jshint:ci'
+        - 'jscs:ci'
+
+default:
+    description: 'Development'
+    tasks:
+        - 'clean:dist'
+        - 'watch'
