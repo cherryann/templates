@@ -1,0 +1,12 @@
+.image-text-50-50 {
+    @include breakpoint(large) {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+.image-text-50-50__col {
+    @include breakpoint(large) {
+        flex: 50%;
+    }
+}

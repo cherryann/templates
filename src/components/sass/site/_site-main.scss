@@ -1,0 +1,13 @@
+.site-main {
+    margin: 0 auto;
+    padding: 0 60px;
+    box-sizing: border-box;
+
+    @include breakpoint(large) {
+        padding: 0 120px;
+    }
+}
+
+.site-main--space {
+    margin-top: 30px;
+}

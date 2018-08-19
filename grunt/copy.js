@@ -13,6 +13,15 @@ module.exports = {
             '!**/*.spec.js'
         ],
         dest: '<%= distPath %>js/'
+    },
+
+    font: {
+        expand: true,
+        cwd: '<%= srcPath %>fonts/',
+        src: [
+            '**/*.woff2'
+        ],
+        dest: '<%= distPath %>fonts/'
     }
 
 };

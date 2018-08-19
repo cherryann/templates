@@ -1,0 +1,11 @@
+.text-copy {
+    @extend %text-reset;
+
+    line-height: 1.4em;
+}
+
+.text-copy--bold {
+    @extend %text-reset;
+
+    font-weight: 600;
+}

@@ -1,0 +1,13 @@
+.link-primary {
+    @extend %link-base;
+
+    color: $color-mine-shaft;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.2em;
+
+    &:hover {
+        color: $color-primary-shade;
+    }
+}
