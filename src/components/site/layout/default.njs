@@ -1,5 +1,5 @@
-{% import sitePath + "site-head.njs" as siteHead %}
-{% import sitePath + "site-foot.njs" as siteFoot %}
+{% import sitePath + "site-header.njs" as siteHeader %}
+{% import sitePath + "site-footer.njs" as siteFooter %}
 
 <!DOCTYPE html>
 <html>
@@ -13,7 +13,7 @@
 
     <div class="site">
         {% block navigation %}
-            {{ siteHead.siteHead() }}
+            {{ siteHeader.siteHeader() }}
         {% endblock %}
 
         <main class="site-main site-main--space">
@@ -22,7 +22,7 @@
         </main>
 
         {% block footer %}
-            {{ siteFoot.siteFoot() }}
+            {{ siteFooter.siteFooter() }}
         {% endblock %}
     </div>
 

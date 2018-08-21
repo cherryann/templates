@@ -1,0 +1,70 @@
+// Font mixin
+
+@mixin font (
+    $font-family: false,
+    $font-family-fallback: sans-serif,
+    $font-weight: false,
+    $font-style: normal,
+    $font-size: false,
+    $line-height: false
+) {
+
+    // Font family
+    @if $font-family {
+        font-family: $font-family, $font-family-fallback;
+    }
+
+    // Font weight
+    @if $font-weight == 'Light' {
+        font-weight: 300;
+    }
+
+    @if $font-weight == 'Regular' {
+        font-weight: 400;
+    }
+
+    @if $font-weight == 'Semibold' {
+        font-weight: 600;
+    }
+
+    @if $font-weight == 'Bold' {
+        font-weight: 700;
+    }
+
+    // Font style
+    font-style: $font-style;
+
+    // Font size
+    @if $font-size {
+
+        // If multiple font sizes for breakpoints
+        @if type-of($font-size) == map {
+            @each $font-size-key, $font-size-value in $font-size {
+                @include breakpoint($font-size-key) {
+                    font-size: $font-size-value;
+                }
+            }
+        } @else {
+
+            // Otherwise use $font-size
+            font-size: $font-size;
+        }
+    }
+
+    // Line height
+    @if $line-height {
+
+        // If multiple font sizes for breakpoints
+        @if type-of($line-height) == map {
+            @each $line-height-key, $line-height-value in $line-height {
+                @include breakpoint($line-height-key) {
+                    line-height: $line-height-value;
+                }
+            }
+        } @else {
+
+            // Otherwise use $line-height
+            line-height: $line-height;
+        }
+    }
+}

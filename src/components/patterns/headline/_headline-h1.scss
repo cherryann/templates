@@ -1,0 +1,18 @@
+%headline-h1,
+.headline-h1 {
+    @include font(
+        $font-family: 'Open Sans',
+        $font-weight: 'Regular',
+        $font-size: (
+            default: 28px,
+            medium: 46px,
+        ),
+        $line-height: (
+            default: 34px,
+            medium: 60px
+        )
+    );
+
+    display: block;
+    margin-bottom: 33px;
+}

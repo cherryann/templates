@@ -1,7 +1,14 @@
 {% macro imageText5050() %}
 
-    <div class="image-text-50-50">
-        <div class="image-text-50-50__col">Image</div>
+    <div class="image-text-50-50 mod-space">
+        <div class="image-text-50-50__col">
+            <img src="http://placehold.it/300x200"
+                 srcset="http://placehold.it/300x200 300w"
+                 sizes="100vw"
+                 alt="Placeholder"
+                 class="img-responsive"
+            />
+        </div>
         <div class="image-text-50-50__col">
             <p class="text-copy--bold">
                 Lorem ipsum dolor sit amet

@@ -1,0 +1,22 @@
+.site-header {
+    padding: 30px 60px 40px;
+    margin: 0;
+    background: $color-white;
+    box-sizing: border-box;
+    border-top: 10px solid $color-primary;
+
+    @include breakpoint(large) {
+        margin: 0 60px;
+    }
+}
+
+.site-header__navigation {
+    li {
+        display: inline-block;
+        margin-right: 20px;
+    }
+
+    li:last-child {
+        margin-right: 0;
+    }
+}
