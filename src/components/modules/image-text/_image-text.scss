@@ -1,0 +1,23 @@
+.image-text {
+    @include grid(
+        $col-class: image-text__col,
+        $col-width: (
+            default: 100%,
+            large: 50%
+        )
+    );
+}
+
+.image-text__col {
+    @include breakpoint(default, $inherit: medium) {
+        margin-bottom: 30px;
+
+        + .image-text__col {
+            margin-bottom: 0;
+        }
+    }
+
+    @include breakpoint(large) {
+        box-sizing: border-box;
+    }
+}

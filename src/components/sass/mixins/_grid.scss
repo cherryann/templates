@@ -1,0 +1,23 @@
+@mixin grid (
+    $col-class: grid__col,
+    $col-width: false
+) {
+    display: flex;
+    box-sizing: border-box;
+    margin: 0 -1%;
+
+    @each $width-breakpoint, $width-number in $col-width {
+        @include breakpoint($width-breakpoint) {
+            @if $width-number == 100% {
+                flex-direction: column;
+            } @else {
+                flex-direction: row;
+            }
+
+            .#{$col-class} {
+                padding: 0 1%;
+                flex: 0 $width-number;
+            }
+        }
+    }
+}

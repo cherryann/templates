@@ -1,17 +1,7 @@
-{% import 'modules' as modules %}
-{% import 'patterns' as patterns %}
+{% macro textHighlight() %}
 
-{% extends templatePath + "default.njs" %}
-
-{% block pageTitle %}Overview{% endblock %}
-
-{% block content %}
-
-    <div class="mod-space">
-        <h1 class="headline-h1">headline-h1</h1>
-        <h2 class="headline-h2">headline-h2</h2>
-        <h3 class="headline-h3">headline-h3</h3>
-
+    <div class="text-highlight mod-space">
+        <p class="headline-h3">Headline</p>
         <p class="text-copy--bold">
             Lorem ipsum dolor sit amet
         </p>
@@ -25,10 +15,4 @@
         </p>
     </div>
 
-    <h3 class="headline-h3">image-text</h3>
-    {{ modules.imageText.imageText() }}
-
-    <h3 class="headline-h3">text-highlight</h3>
-    {{ modules.textHighlight.textHighlight() }}
-
-{% endblock %}
+{% endmacro %}

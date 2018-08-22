@@ -1,0 +1,12 @@
+.text-highlight {
+    background: $color-primary;
+    color: $color-white;
+    text-align: center;
+    margin: 0 -60px;
+    padding: 30px 60px;
+
+    @include breakpoint(large) {
+        margin: 0 -120px;
+        padding: 60px 120px;
+    }
+}
