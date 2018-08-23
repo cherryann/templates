@@ -1,6 +1,6 @@
 {% macro textHighlight() %}
 
-    <div class="text-highlight mod-space">
+    <div class="text-highlight mod-space text-highlight--static-image" style="background-image: url('/images/1530719388.jpg');">
         <p class="headline-h3">Headline</p>
         <p class="text-copy--bold">
             Lorem ipsum dolor sit amet

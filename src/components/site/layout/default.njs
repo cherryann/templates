@@ -7,8 +7,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="robots" content="index, follow, archive">
+    <meta name="twitter:title" content="">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="og:url" content="">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="">
+    <meta name="twitter:image" content="">
+    <meta property="og:image" content="">
     {#<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">#}
-    <title>templates | {% block pageTitle %}{% endblock %}</title>
+
+    <title>{% block pageTitle %}{% endblock %}</title>
 
     <link rel="stylesheet" href="/css/main.css">
 

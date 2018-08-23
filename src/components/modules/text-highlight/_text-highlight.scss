@@ -1,12 +1,18 @@
 .text-highlight {
-    background: $color-primary;
-    color: $color-white;
+    color: $color-text;
     text-align: center;
     margin: 0 -60px;
     padding: 30px 60px;
 
     @include breakpoint(large) {
         margin: 0 -120px;
-        padding: 60px 120px;
+        padding: 120px;
     }
+}
+
+.text-highlight--static-image {
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }

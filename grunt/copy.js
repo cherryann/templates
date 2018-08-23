@@ -22,6 +22,16 @@ module.exports = {
             '**/*.woff2'
         ],
         dest: '<%= distPath %>fonts/'
+    },
+
+    image: {
+        expand: true,
+        cwd: '<%= srcPath %>images/',
+        src: [
+            '**/*.jpg',
+            '**/*.png'
+        ],
+        dest: '<%= distPath %>images/'
     }
 
 };

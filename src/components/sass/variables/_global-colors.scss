@@ -1,3 +1,4 @@
+// color-pool
 $color-white: #fff;
 
 $color-soapstone: #fffbfa;
@@ -8,10 +9,13 @@ $color-monte-carlo: #8bd7d2;
 $color-malibu: #54defd;
 $color-picton-blue: #49c6e5;
 
+// variables for usage
 $color-primary: $color-caribbean-green;
 $color-primary-shade: $color-monte-carlo;
 $color-secondary: $color-malibu;
 $color-secondary-shade: $color-picton-blue;
 
-$color-text: $color-mine-shaft;
+$color-text: $color-soapstone;
+$color-link-primary: $color-mine-shaft;
+$color-link-primary-hover: $color-silver;
 $color-back: $color-soapstone;
