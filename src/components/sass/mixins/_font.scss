@@ -2,16 +2,24 @@
 
 @mixin font (
     $font-family: false,
-    $font-family-fallback: sans-serif,
+    $font-family-fallback: false,
     $font-weight: false,
     $font-style: normal,
     $font-size: false,
     $line-height: false
 ) {
 
-    // Font family
-    @if $font-family {
+    // Font family and fallback
+    @if $font-family and $font-family-fallback == false {
+        font-family: $font-family;
+    }
+
+    @if $font-family and $font-family-fallback {
         font-family: $font-family, $font-family-fallback;
+    }
+
+    @if $font-family-fallback and $font-family == false {
+        font-family: $font-family-fallback;
     }
 
     // Font weight

@@ -1,8 +1,8 @@
 .text-highlight {
     color: $color-text;
     text-align: center;
-    margin: 0 -60px;
     padding: 30px 60px;
+    margin: 0 -60px;
 
     @include breakpoint(large) {
         margin: 0 -120px;
@@ -15,4 +15,21 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+}
+
+.text-highlight__text {
+    text-shadow: 2px 2px $color-shadow;
+
+    @include font(
+        $font-family: 'Satisfy',
+        $font-family-fallback: cursive,
+        $font-size: (
+            default: 28px,
+            medium: 46px,
+        ),
+        $line-height: (
+            default: 34px,
+            medium: 60px
+        )
+    );
 }

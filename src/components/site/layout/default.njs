@@ -37,7 +37,7 @@
             {{ siteHeader.siteHeader() }}
         {% endblock %}
 
-        <main class="site-main site-main--space">
+        <main class="site-main">
             {% block content %}
             {% endblock %}
         </main>

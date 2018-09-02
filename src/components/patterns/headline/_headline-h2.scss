@@ -3,6 +3,7 @@
     @include font(
         $font-family: 'Open Sans',
         $font-weight: 'Regular',
+        $font-family-fallback: sans-serif,
         $font-size: (
             default: 28px,
             medium: 40px

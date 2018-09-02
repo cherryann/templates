@@ -1,0 +1,39 @@
+.image-mosaic {
+    margin: 0 -60px;
+
+    @include breakpoint(large) {
+        margin: 0 -120px;
+    }
+
+    &:hover .image-mosaic__content { opacity: 0.3; }
+    &:hover .image-mosaic__content:hover { opacity: 1; }
+}
+
+.image-mosaic__content {
+    transition: 0.8s opacity;
+    line-height: initial;
+    float: left;
+    width: 100%;
+    height: auto;
+    display: block;
+
+    @include breakpoint(medium) {
+        width: 50%;
+    }
+
+    @include breakpoint(large) {
+        width: 33.33%;
+    }
+}
+
+.image-mosaic__image {
+    @extend %img-responsive;
+
+    display: block;
+}
+
+.modal .image-mosaic__image {
+    width: auto;
+    height: auto;
+    margin: auto;
+}
