@@ -14,8 +14,14 @@
         // constructors: [ 'ready', 'events' ],
 
         defaults: {
-            item: '.image-mosaic__content',
-            module: '.image-mosaic'
+            module: '.image-mosaic',
+            gridItem: '.image-mosaic__content',
+            contentItem: '.image-mosaic__image',
+            modal: '.image-mosaic__modal',
+            modalClose: '.image-mosaic__modal-backdrop, .image-mosaic__modal-close, .image-mosaic__modal-window',
+            modalOpen: 'image-mosaic__modal-open',
+            helper: 'hidden',
+            showModal: true
         },
 
         ready: function( element, options ) {
@@ -23,12 +29,15 @@
             this.options = $.extend( this.defaults, options );
 
             this.initMosaic();
-            this.openModal();
+
+            if ( this.options.showModal === true ) {
+                this.initModal();
+            }
         },
 
         initMosaic: function() {
             var iso = new Isotope( this.options.module, {
-                itemSelector: this.options.item,
+                itemSelector: this.options.gridItem,
                 percentPosition: true,
                 masonry: {
                     columnWidth: '.grid-sizer'
@@ -40,29 +49,25 @@
             } );
         },
 
-        openModal: function() {
-            $( '.image-mosaic__image', this.element ).on( 'click', function( event ) {
+        initModal: function() {
+            var that = this;
+
+            $( this.options.contentItem ).on( 'click', function( event ) {
                 event.preventDefault();
 
                 var imgItem = '<img src="' + $( this ).attr( 'src' ) + '" class="image-mosaic__image" />';
-                var modal =
-                '<div class="modal">' +
-                    '<span class="modal-close"></span>' +
-                    '<div class="modal-window">' + imgItem + '</div>' +
-                    '<div class="modal-backdrop"></div>' +
-                '</div>';
+                $( that.options.modal ).find( '.image-mosaic__modal-window' ).html( imgItem );
+                $( that.options.modal ).removeClass( that.options.helper );
+                $( 'body' ).addClass( that.options.modalOpen );
+            } );
 
-                $( 'body' ).addClass( 'modal-open' ).append( modal );
-                $( '.modal' ).css( 'display', 'block' );
+            $( this.options.modalClose ).on( 'click', function() {
+                $( that.options.modal ).addClass( that.options.helper );
+                $( 'body' ).removeClass( that.options.modalOpen );
             } );
         },
 
         events: function( element, options ) {
-
-            $( '.modal-close' ).on( 'click', function () {
-                $( 'body' ).removeClass( 'modal-open' );
-                $( '.modal' ).css( 'display', 'none' );
-            });
         }
 
     };

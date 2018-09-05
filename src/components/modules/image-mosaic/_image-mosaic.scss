@@ -32,8 +32,58 @@
     display: block;
 }
 
-.modal .image-mosaic__image {
+.image-mosaic__modal .image-mosaic__image {
     width: auto;
     height: auto;
     margin: auto;
+}
+
+.image-mosaic__modal {
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 11;
+
+    &.hidden {
+        display: none;
+    }
+}
+
+.image-mosaic__modal-window {
+    position: fixed;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    z-index: 10;
+    max-height: 90%;
+    box-sizing: border-box;
+    overflow-y: auto;
+    background: red;
+}
+
+.image-mosaic__modal-backdrop {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    cursor: pointer;
+}
+
+.image-mosaic__modal-open {
+    overflow: hidden;
+}
+
+.image-mosaic__modal-close {
+    display: block;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    position: fixed;
+    z-index: 100;
 }

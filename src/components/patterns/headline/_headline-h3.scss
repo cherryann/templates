@@ -1,16 +1,15 @@
 %headline-h3,
 .headline-h3 {
     @include font(
-        $font-family: 'Open Sans',
-        $font-weight: 'Regular',
-        $font-family-fallback: sans-serif,
+        $font-family: 'Satisfy',
+        $font-family-fallback: cursive,
         $font-size: (
             default: 28px,
-            medium: 40px
+            medium: 46px,
         ),
         $line-height: (
             default: 34px,
-            medium: 46px
+            medium: 60px
         )
     );
 

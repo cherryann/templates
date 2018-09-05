@@ -22,12 +22,44 @@
     }}
 
     {{ modules.imageMosaic.imageMosaic (
-        space = true )
+        space = true,
+        content = '<div class="image-mosaic__content"><img src="http://placehold.it/600x400" class="image-mosaic__image" /></div>
+            <div class="image-mosaic__content"><img src="http://placehold.it/400x600" class="image-mosaic__image" /></div>
+            <div class="image-mosaic__content"><img src="http://placehold.it/300x600" class="image-mosaic__image" /></div>
+            <div class="image-mosaic__content"><img src="http://placehold.it/300x600" class="image-mosaic__image" /></div>
+            <div class="image-mosaic__content"><img src="http://placehold.it/400x600" class="image-mosaic__image" /></div>
+            <div class="image-mosaic__content"><img src="http://placehold.it/400x600" class="image-mosaic__image" /></div>
+            <div class="image-mosaic__content"><img src="http://placehold.it/600x400" class="image-mosaic__image" /></div>'
+    )
     }}
 
     {{ modules.textHighlight.textHighlight (
+        space = true,
         text = 'Was zählt ist der Moment',
         background = '/images/1530719388.jpg' )
     }}
 
+    {{ modules.imageText.imageText(
+    space = true,
+    image = '<img src="http://placehold.it/300x200"
+                 srcset="http://placehold.it/300x200 300w"
+                 sizes="100vw"
+                 alt="Placeholder"
+                 class="img-responsive"
+            />',
+    text = '<p class="headline-h3">
+                Lorem ipsum dolor sit amet
+            </p>
+            <p class="text-copy">
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
+                et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+                Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
+                amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
+                kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+            </p>' ) }}
+
+{% endblock %}
+
+{% block footer %}
 {% endblock %}

@@ -1,4 +1,4 @@
-{% macro imageText( image = false, text = false, space = false ) %}
+{% macro imageText( image = '', text = '', space = false ) %}
 
     <div class="image-text {% if space %}mod-space{% endif %}">
         <div class="image-text__col">
