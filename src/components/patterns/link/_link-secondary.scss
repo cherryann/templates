@@ -1,4 +1,4 @@
-.link-primary {
+.link-secondary {
     @extend %link-base;
 
     @include font(
@@ -6,7 +6,7 @@
         $font-weight: 'Regular',
         $font-family-fallback: sans-serif,
         $font-size: (
-            default: 16px
+            default: 13px
         ),
         $line-height: (
             default: 1.2em

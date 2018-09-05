@@ -1,9 +1,9 @@
 .site-footer {
-    background: $color-white;
-    padding: 60px;
+    background: $color-back-footer;
+    padding: 30px 60px;
 
     @include breakpoint(large) {
-        padding: 60px 120px;
+        padding: 30px 120px;
     }
 }
 

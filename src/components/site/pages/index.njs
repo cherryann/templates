@@ -5,6 +5,16 @@
 
 {% block pageTitle %}Overview{% endblock %}
 
+{% block navigation %}
+    {{ siteHeader.siteHeader(
+    space = true,
+    content = '<li><a href="#" class="link-primary">HOME</a></li>
+            <li><a href="#" class="link-primary">LINK 1</a></li>
+            <li><a href="#" class="link-primary">LINK 2</a></li>
+            <li><a href="#" class="link-primary">LINK 3</a></li>'
+    ) }}
+{% endblock %}
+
 {% block content %}
 
     <div class="mod-space">
@@ -52,10 +62,10 @@
     space = true,
     content = '<div class="image-mosaic__content"><img src="http://placehold.it/600x400" class="image-mosaic__image" /></div>
             <div class="image-mosaic__content"><img src="http://placehold.it/400x600" class="image-mosaic__image" /></div>
-            <div class="image-mosaic__content"><img src="http://placehold.it/300x600" class="image-mosaic__image" /></div>
+            <div class="image-mosaic__content"><img src="http://placehold.it/1200x800" class="image-mosaic__image" /></div>
             <div class="image-mosaic__content"><img src="http://placehold.it/300x600" class="image-mosaic__image" /></div>
             <div class="image-mosaic__content"><img src="http://placehold.it/400x600" class="image-mosaic__image" /></div>
-            <div class="image-mosaic__content"><img src="http://placehold.it/400x600" class="image-mosaic__image" /></div>
+            <div class="image-mosaic__content"><img src="http://placehold.it/3000x1200" class="image-mosaic__image" /></div>
             <div class="image-mosaic__content"><img src="http://placehold.it/600x400" class="image-mosaic__image" /></div>'
     )
     }}
@@ -69,5 +79,13 @@
                 kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.',
     background = 'http://placehold.it/600x400' )
     }}
+
+    <h3 class="headline-h3">social-share</h3>
+    {{ modules.socialShare.socialShare(
+    space = true,
+    twitterUrl = '',
+    twitterText = '',
+    facebookUrl = ''
+    ) }}
 
 {% endblock %}

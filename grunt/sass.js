@@ -11,12 +11,18 @@ module.exports = {
         options: {
             sourceMap: true
         },
-        files: { '<%= distPath %>css/main.css': '<%= srcPath %>components/sass/main.scss' }
+        files: {
+            '<%= distPath %>css/main.css': '<%= srcPath %>components/sass/main.scss',
+            '<%= distPath %>css/skin.css': '<%= srcPath %>components/sass/skin.scss'
+        }
     },
     production: {
         options: {
             outputStyle: 'compressed'
         },
-        files: { '<%= distPath %>css/main.css': '<%= srcPath %>components/sass/main.scss' }
+        files: {
+            '<%= distPath %>css/main.css': '<%= srcPath %>components/sass/main.scss',
+            '<%= distPath %>css/skin.css': '<%= srcPath %>components/sass/skin.scss'
+        }
     }
 };

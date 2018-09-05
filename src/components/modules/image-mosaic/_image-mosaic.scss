@@ -30,11 +30,10 @@
     @extend %img-responsive;
 
     display: block;
+    cursor: pointer;
 }
 
 .image-mosaic__modal .image-mosaic__image {
-    width: auto;
-    height: auto;
     margin: auto;
 }
 

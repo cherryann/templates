@@ -1,9 +1,8 @@
 %headline-h2,
 .headline-h2 {
     @include font(
-        $font-family: 'Open Sans',
-        $font-weight: 'Regular',
-        $font-family-fallback: sans-serif,
+        $font-family: 'Satisfy',
+        $font-family-fallback: cursive,
         $font-size: (
             default: 28px,
             medium: 40px

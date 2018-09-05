@@ -1,12 +1,11 @@
 %headline-h1,
 .headline-h1 {
     @include font(
-        $font-family: 'Open Sans',
-        $font-weight: 'Regular',
-        $font-family-fallback: sans-serif,
+        $font-family: 'Satisfy',
+        $font-family-fallback: cursive,
         $font-size: (
             default: 28px,
-            medium: 46px,
+            medium: 46px
         ),
         $line-height: (
             default: 34px,
