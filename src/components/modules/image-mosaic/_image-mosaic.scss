@@ -1,5 +1,6 @@
 .image-mosaic {
     margin: 0 -60px;
+    overflow: hidden;
 
     @include breakpoint(large) {
         margin: 0 -120px;

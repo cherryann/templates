@@ -1,17 +1,19 @@
-%headline-h3,
-.headline-h3 {
+%headline-h4,
+.headline-h4 {
     @include font(
         $font-family: 'Satisfy',
         $font-family-fallback: cursive,
         $font-size: (
             default: 25px,
-            medium: 35px
+            medium: 30px
         ),
         $line-height: (
             default: 1.2
         )
     );
 
+    color: $color-text-highlight;
+    border-bottom: 4px solid $color-text-highlight;
     display: block;
     margin: 0 0 23px;
 }

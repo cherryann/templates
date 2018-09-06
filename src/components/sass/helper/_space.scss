@@ -5,3 +5,11 @@
         margin-bottom: 60px;
     }
 }
+
+.mod-space--large {
+    margin-bottom: 60px;
+
+    @include breakpoint(large) {
+        margin-bottom: 120px;
+    }
+}

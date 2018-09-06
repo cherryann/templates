@@ -1,11 +1,10 @@
-%headline-h3,
-.headline-h3 {
+%headline-h5,
+.headline-h5 {
     @include font(
         $font-family: 'Satisfy',
         $font-family-fallback: cursive,
         $font-size: (
-            default: 25px,
-            medium: 35px
+            default: 25px
         ),
         $line-height: (
             default: 1.2

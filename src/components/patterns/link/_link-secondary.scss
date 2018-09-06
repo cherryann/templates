@@ -6,16 +6,22 @@
         $font-weight: 'Regular',
         $font-family-fallback: sans-serif,
         $font-size: (
-            default: 13px
+            default: 16px
         ),
         $line-height: (
             default: 1.2em
         )
     );
 
-    color: $color-link-primary;
+    color: $color-link-secondary;
 
     &:hover {
-        color: $color-link-primary-hover;
+        color: $color-link-secondary-hover;
+    }
+
+    &.disabled {
+        opacity: 0.5;
+        cursor: default;
+        pointer-events: none;
     }
 }

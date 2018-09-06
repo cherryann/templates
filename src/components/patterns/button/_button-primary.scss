@@ -1,0 +1,40 @@
+%btn-primary-hover {
+    top: 2px;
+    left: 2px;
+    box-shadow: 2px 2px 0 transparent;
+    border: 2px solid $color-button-primary-hover;
+    color: $color-button-primary-hover;
+
+    &:disabled,
+    &.disabled {
+        pointer-events: none;
+    }
+}
+
+.button-primary {
+    @extend %btn-reset;
+
+    padding: 5px 15px;
+    text-decoration: none;
+    background: transparent;
+    border: 2px solid $color-button-primary;
+    color: $color-button-primary;
+    display: inline-block;
+    position: relative;
+    text-transform: uppercase;
+    border-radius: 5px;
+    box-shadow: 2px 2px 0 $color-button-primary;
+    line-height: 1.2em;
+
+    &:hover,
+    &:focus {
+        @extend %btn-primary-hover;
+    }
+
+    &:disabled,
+    &.disabled {
+        opacity: 0.5;
+        cursor: default;
+        pointer-events: none;
+    }
+}

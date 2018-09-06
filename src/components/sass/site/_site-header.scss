@@ -1,17 +1,35 @@
 .site-header {
-    padding: 30px 120px 40px;
+    padding: 30px 30px 40px;
     margin: 0;
     background: $color-back-header;
     box-sizing: border-box;
+
+    @include breakpoint(medium) {
+        padding: 30px 120px 40px;
+    }
 }
 
 .site-header__navigation {
     li {
         display: inline-block;
         margin-right: 20px;
+        margin-bottom: 20px;
+
+        @include breakpoint(medium) {
+            display: inline-block;
+            margin-right: 20px;
+            margin-bottom: 0;
+        }
     }
 
     li:last-child {
         margin-right: 0;
     }
+}
+
+.site-header__logo {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
 }

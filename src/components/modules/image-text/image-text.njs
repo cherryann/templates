@@ -1,11 +1,11 @@
-{% macro imageText( image = '', text = '', space = false, condition = false ) %}
+{% macro imageText( contentLeft = '', contentRight = '', space = '' ) %}
 
-    <div class="image-text {% if space %}mod-space{% endif %}">
+    <div class="image-text {% if space %}{{ space }}{% endif %}">
         <div class="image-text__col">
-            {{ image | safe }}
+            {{ contentLeft | safe }}
         </div>
         <div class="image-text__col">
-            {{ text | safe }}
+            {{ contentRight | safe }}
         </div>
     </div>
 

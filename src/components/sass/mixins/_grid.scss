@@ -4,7 +4,7 @@
 ) {
     display: flex;
     box-sizing: border-box;
-    margin: 0 -1%;
+    margin: 0 -2%;
 
     @each $width-breakpoint, $width-number in $col-width {
         @include breakpoint($width-breakpoint) {
@@ -15,7 +15,7 @@
             }
 
             .#{$col-class} {
-                padding: 0 1%;
+                padding: 0 2%;
                 flex: 0 $width-number;
             }
         }

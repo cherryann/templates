@@ -1,0 +1,36 @@
+%btn-secondary-hover {
+    box-shadow: 2px 2px 0 transparent;
+    border: 2px solid $color-button-secondary-hover;
+    color: $color-button-secondary-hover;
+
+    &:disabled,
+    &.disabled {
+        pointer-events: none;
+    }
+}
+
+.button-secondary {
+    @extend %btn-reset;
+
+    padding: 5px 15px;
+    text-decoration: none;
+    background: transparent;
+    border: 2px solid $color-button-secondary;
+    color: $color-button-secondary;
+    display: inline-block;
+    text-transform: uppercase;
+    border-radius: 5px;
+    line-height: 1.2em;
+
+    &:hover,
+    &:focus {
+        @extend %btn-secondary-hover;
+    }
+
+    &:disabled,
+    &.disabled {
+        opacity: 0.5;
+        cursor: default;
+        pointer-events: none;
+    }
+}

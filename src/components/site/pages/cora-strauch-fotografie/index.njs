@@ -31,52 +31,29 @@
 
 {% block navigation %}
     {{ siteHeader.siteHeader(
-    space = true,
-    content = '<li><a href="#" class="link-primary">HOME1</a></li>
-            <li><a href="#" class="link-primary">LINK 1</a></li>
-            <li><a href="#" class="link-primary">LINK 2</a></li>
-            <li><a href="#" class="link-primary">LINK 3</a></li>'
+    content = '<li><a href="#">HOME1</a></li>
+            <li><a href="#">LINK 1</a></li>
+            <li><a href="#">LINK 2</a></li>
+            <li><a href="#">LINK 3</a></li>'
     ) }}
 {% endblock %}
 
 {% block content %}
-
-    {{ modules.imageText.imageText(
-    space = true,
-    image = '<img src="http://placehold.it/300x200"
-                 srcset="http://placehold.it/300x200 300w"
+    {{ modules.imageMood.imageMood (
+        space = 'mod-space--large',
+        image = '<img src="http://placehold.it/1600x400"
+                 srcset="http://placehold.it/1600x400 300w"
                  sizes="100vw"
                  alt="Placeholder"
                  class="img-responsive"
-            />',
-    text = '<p class="headline-h1">
-                Über mich
-            </p>
-            <p class="text-copy">
-                Ich bin Cora Strauch, Hobby Fotografin, in und um Heinsberg.<br />
-                Ich fotografiere mit dem Herzen und freue mich, für euch besondere Momente festhalten zu dürfen und euch damit Freude zu machen!<br /><br />
-                Ich liebe die natürliche Fotografie von Menschen und Emotionen um Erinnerungen festzuhalten.<br />
-                Familien, Babybauchzeit, Babys/ Neugeborene und Feste sind Motive, für die wir sehr gerne einen Termin vereinbaren können! :)<br /><br />
-                Meldet euch gerne unter <a href="tel:0171/2373225" class="link-primary">0171/2373225</a><br />
-                Oder <a href="mailto:corastrauch@gmx.de" class="link-primary">corastrauch@gmx.de</a><br /><br />
-            </p>
-            <p class="headline-h3">Preise</strong>
-            <p class="text-copy">
-                Ich würde mich, bei Interesse, über eine Nachricht<br />
-                mit eurem Wunsch/Anliegen freuen und wir besprechen alles weitere! :)<br /><br />
-                Grundsätzlich biete ich jedoch immer an, dass euch alle Bilder die während des Shootings entstehen, auf SDHC oder CD zur Verfügung stehen.
-            </p>'
-    ) }}
+            />'
+    )}}
 
-    {{ modules.textHighlight.textHighlight (
-        space = true,
-        text = 'Welches meiner Fotos ich am liebsten mag? <br /> Das was ich Morgen machen werde!',
-        background = '/images/1530719388.jpg' )
-    }}
+    <h1 class="headline-h1">Moments - Cora Strauch Fotografie</h1>
 
     {{ modules.imageMosaic.imageMosaic (
-        space = true,
-        content = '<div class="image-mosaic__content"><img src="http://placehold.it/600x400" class="image-mosaic__image" /></div>
+    space = 'mod-space',
+    content = '<div class="image-mosaic__content"><img src="http://placehold.it/600x400" class="image-mosaic__image" /></div>
             <div class="image-mosaic__content"><img src="http://placehold.it/400x600" class="image-mosaic__image" /></div>
             <div class="image-mosaic__content"><img src="http://placehold.it/300x600" class="image-mosaic__image" /></div>
             <div class="image-mosaic__content"><img src="http://placehold.it/300x600" class="image-mosaic__image" /></div>
@@ -87,23 +64,83 @@
     }}
 
     {{ modules.textHighlight.textHighlight (
-        space = true,
+    space = 'mod-space--large',
+    text = 'Welches meiner Fotos ich am liebsten mag? <br /> Das was ich Morgen machen werde!',
+    background = '/images/1530719388.jpg' )
+    }}
+
+    {{ modules.imageText.imageText(
+    space = 'mod-space',
+    contentLeft = '<img src="http://placehold.it/300x200"
+                 srcset="http://placehold.it/300x200 300w"
+                 sizes="100vw"
+                 alt="Placeholder"
+                 class="img-responsive"
+            />',
+    contentRight = '<h2 class="headline-h3">Über mich</h2><p class="text-copy">
+                Ich bin Cora Strauch, Hobby Fotografin, in und um Heinsberg.<br />
+                Ich fotografiere mit dem Herzen und freue mich, für euch besondere Momente festhalten zu dürfen und euch damit Freude zu machen!<br /><br />
+                Ich liebe die natürliche Fotografie von Menschen und Emotionen um Erinnerungen festzuhalten.<br />
+                Familien, Babybauchzeit, Babys/ Neugeborene und Feste sind Motive, für die wir sehr gerne einen Termin vereinbaren können! :)<br /><br />
+            </p>
+            <p class="text-copy--bold">Preise</strong>
+            <p class="text-copy">
+                Ich würde mich, bei Interesse, über eine Nachricht<br />
+                mit eurem Wunsch/Anliegen freuen und wir besprechen alles weitere!<br /><br />
+                Grundsätzlich biete ich jedoch immer an, dass euch alle Bilder die während des Shootings entstehen, auf SDHC oder CD zur Verfügung stehen.
+            </p>'
+    ) }}
+
+    {{ modules.socialMedia.socialMedia(
+        space = 'mod-space--large',
+        phoneNumber = '01712373225',
+        mailAddress = 'corastrauch@gmx.de',
+        instagramUser = 'corastrauchfotografie',
+        infoTextInstagram = 'Schau dir meine neusten Fotos auf Instagram an!',
+        infoTextPhone = 'Interesse geweckt? Ich freue mich von dir zu hören.',
+        infoTextMail = 'Interesse geweckt? Ich freue mich über deine Nachricht!'
+    ) }}
+
+
+
+    {{ modules.contactInfo.contactInfo (
+    space = 'mod-space',
+    text = '<h3 class="headline-h3">Kontakt</h3>
+            <p class="text-copy">Cora Strauch<br />
+            52525 Heinsberg<br />
+            Cora Strauch@gmx.de<br />
+            Telefon: 01712373225</p>',
+    iframeSrc = 'https://www.openstreetmap.org/export/embed.html?bbox=5.977760776877404%2C51.01488777835605%2C6.22306488454342%2C51.109287441033736&amp;layer=mapnik&amp;marker=51.06211167114368%2C6.100412830710411',
+    previewUrl = 'https://www.openstreetmap.org/?mlat=51.0621&amp;mlon=6.1004#map=13/51.0621/6.1004s'
+    )
+    }}
+
+    {{ modules.textHighlight.textHighlight (
+        space = 'mod-space',
         text = 'Was zählt ist der Moment',
         background = '/images/1530719388.jpg' )
     }}
 
-    {{ modules.socialShare.socialShare(
-        space = true,
-        twitterUrl = '',
-        twitterText = '',
-        facebookUrl = ''
+    {{ modules.socialMedia.socialMedia(
+        space = 'mod-space',
+        twitterUrl = '1',
+        twitterText = '1',
+        facebookUrl = '1',
+        phoneNumber = '01712373225',
+        mailAddress = 'corastrauch@gmx.de',
+        instagramUser = 'corastrauchfotografie',
+        infoTextTwitter = 'Teile meine Seite bei twitter',
+        infoTextFacebook = 'Teile meine Seite bei facebook',
+        infoTextInstagram = 'Schau dir meine neusten Fotos bei Instagram an',
+        infoTextPhone = 'Ich freue mich von dir zu hören!',
+        infoTextMail = 'Ich freue mich über deine Nachricht!'
     ) }}
 {% endblock %}
 
 {% block footer %}
     {{ siteFooter.siteFooter(
-    content = '<li><a href="#" class="link-secondary">Link 1</a></li>
-            <li><a href="#" class="link-secondary">Link 2</a></li>
-            <li><a href="#" class="link-secondary">Link 3</a></li>'
+    content = '<li><a href="#">Link 1</a></li>
+            <li><a href="#">Link 2</a></li>
+            <li><a href="#">Link 3</a></li>'
     ) }}
 {% endblock %}

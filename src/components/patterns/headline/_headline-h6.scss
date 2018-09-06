@@ -1,16 +1,19 @@
-body {
+%headline-h6,
+.headline-h6 {
     @include font(
         $font-family: 'Open Sans',
-        $font-weight: 'Regular',
+        $font-weight: 'Bold',
         $font-family-fallback: sans-serif,
         $font-size: (
-            default: 16px
+            default: 16px,
+            medium: 20px
         ),
         $line-height: (
             default: 1.2em
         )
     );
 
-    background: $color-back;
-    color: $color-text;
+    text-transform: uppercase;
+    display: block;
+    margin: 0 0 23px;
 }

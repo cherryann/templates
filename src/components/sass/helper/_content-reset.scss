@@ -1,0 +1,7 @@
+%content-reset {
+    margin: 0 -60px;
+
+    @include breakpoint(large) {
+        margin: 0 -120px;
+    }
+}

@@ -1,6 +1,6 @@
-{% macro imageMosaic( space = false, content = '', hiddenModal = false ) %}
+{% macro imageMosaic( space = '', content = '', hiddenModal = false ) %}
 
-    <div class="image-mosaic auto-init {% if space %}mod-space{% endif %}" data-module="modules/image-mosaic/image-mosaic" {% if hiddenModal %}data-options='{"showModal": "false"}'{% endif %}>
+    <div class="image-mosaic auto-init {% if space %}{{ space }}{% endif %}" data-module="modules/image-mosaic/image-mosaic" {% if hiddenModal %}data-options='{"showModal": "false"}'{% endif %}>
 
         <div class="image-mosaic__grid">
             {{ content | safe }}

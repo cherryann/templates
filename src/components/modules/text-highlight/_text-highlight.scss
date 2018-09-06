@@ -19,7 +19,7 @@
 
 .text-highlight__text {
     text-shadow: 2px 2px $color-shadow;
-    color: $color-text-highlight;
+    color: $color-text-reverse;
 
     @include font(
         $font-family: 'Satisfy',
