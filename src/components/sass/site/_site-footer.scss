@@ -1,19 +1,17 @@
 .site-footer {
     background: $color-back-footer;
-    padding: 30px 60px;
+    padding: 30px 30px 15px;
 
     @include breakpoint(large) {
-        padding: 30px 120px;
+        padding: 30px 120px 15px;
     }
 }
 
 .site-footer__navigation {
+    margin: 0 -10px;
+
     li {
         display: inline-block;
-        margin-right: 20px;
-    }
-
-    li:last-child {
-        margin-right: 0;
+        margin: 0 10px 15px;
     }
 }

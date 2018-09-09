@@ -72,6 +72,17 @@
         <a href="/" class="button-secondary disabled">Button secondary as a disabled class</a>
     </div>
 
+    <h3 class="headline-h3">image-mood</h3>
+    {{ modules.imageMood.imageMood (
+    space = 'mod-space--large',
+    image = '<img src="http://placehold.it/1600x400"
+                 srcset="http://placehold.it/1600x400 300w"
+                 sizes="100vw"
+                 alt="Placeholder"
+                 class="img-responsive"
+            />'
+    )}}
+
     <h3 class="headline-h3">contact-info</h3>
     {{ modules.contactInfo.contactInfo (
     space = 'mod-space',

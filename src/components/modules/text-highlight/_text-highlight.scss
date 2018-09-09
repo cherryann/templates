@@ -1,11 +1,11 @@
 .text-highlight {
+    @extend %content-reset;
+
     color: $color-text;
     text-align: center;
     padding: 30px 60px;
-    margin: 0 -60px;
 
     @include breakpoint(large) {
-        margin: 0 -120px;
         padding: 120px;
     }
 }

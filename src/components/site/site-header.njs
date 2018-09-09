@@ -1,7 +1,10 @@
-{% macro siteHeader( content = '', space = '' ) %}
-<header class="site-header {% if space %}{{ space }}{% endif %}">
+{% macro siteHeader( content = '', space = '', invert = '' ) %}
+<header class="site-header {% if space %}{{ space }}{% endif %}{% if invert %}{{ invert }}{% endif %}">
     <nav>
-        <a href="#" class="site-header__logo">Logo</a>
+        <div class="site-header__logo">
+            <a href="#" class="site-header__logo-image">Logo</a>
+        </div>
+
         <ul class="site-header__navigation">
             {{ content | safe }}
         </ul>

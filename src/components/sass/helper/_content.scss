@@ -1,0 +1,15 @@
+%content-reset {
+    margin: 0 -30px;
+
+    @include breakpoint(large) {
+        margin: 0 -120px;
+    }
+}
+
+%content-space {
+    padding: 0 30px;
+
+    @include breakpoint(large) {
+        padding: 0 120px;
+    }
+}

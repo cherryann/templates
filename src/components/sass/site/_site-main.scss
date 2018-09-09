@@ -1,9 +1,6 @@
 .site-main {
-    margin: 0 auto;
-    padding: 0 60px;
-    box-sizing: border-box;
+    @extend %content-space;
 
-    @include breakpoint(large) {
-        padding: 0 120px;
-    }
+    margin: 0 auto;
+    box-sizing: border-box;
 }
