@@ -72,6 +72,31 @@
         <a href="/" class="button-secondary disabled">Button secondary as a disabled class</a>
     </div>
 
+    <h3 class="headline-h3">content-triple</h3>
+    {{ modules.contentTriple.contentTriple (
+    space = 'mod-space',
+    contentLeft = '<h4 class="headline-h4">headline</h4> <p class="text-copy">Lorem ipsum dolor sit
+                amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
+                kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                 <p class="text-copy">Lorem ipsum dolor sit
+                amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
+                kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                <a href="#" class="link-primary">Link primary as anchor</a>',
+    contentMiddle = '<img src="http://placehold.it/600x800" />',
+    contentRight = '<img src="http://placehold.it/600x800" />'
+    )
+    }}
+
+    {{ modules.contentTriple.contentTriple (
+    space = 'mod-space--large',
+    contentLeft = '<img src="http://placehold.it/600x800" />',
+    contentMiddle = '<img src="http://placehold.it/600x800" />',
+    contentRight = '<img src="http://placehold.it/600x800" />'
+    )
+    }}
+
     <h3 class="headline-h3">image-mood</h3>
     {{ modules.imageMood.imageMood (
     space = 'mod-space--large',

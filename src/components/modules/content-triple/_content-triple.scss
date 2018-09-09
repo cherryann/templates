@@ -1,23 +1,23 @@
-.image-text {
+.content-triple {
     @include grid(
-        $col-class: image-text__col,
+        $col-class: content-triple__col,
         $col-width: (
             default: 100%,
-            large: 50%
+            medium: 33.33%
         )
     );
 }
 
-.image-text__col {
+.content-triple img {
+    @extend %img-responsive;
+}
+
+.content-triple__col {
     @include breakpoint(default, $inherit: medium) {
         margin-bottom: 30px;
 
         &:last-child {
             margin-bottom: 0;
         }
-    }
-
-    @include breakpoint(large) {
-        box-sizing: border-box;
     }
 }

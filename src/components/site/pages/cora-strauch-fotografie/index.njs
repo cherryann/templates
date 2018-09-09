@@ -40,7 +40,7 @@
 
 {% block content %}
     {{ modules.imageMood.imageMood (
-        space = 'mod-space--large',
+        headline = '<h1 class="headline-h1">Moments - Cora Strauch Fotografie</h1>',
         image = '<img src="http://placehold.it/1600x400"
                  srcset="http://placehold.it/1600x400 300w"
                  sizes="100vw"
@@ -48,8 +48,6 @@
                  class="img-responsive"
             />'
     )}}
-
-    <h1 class="headline-h1">Moments - Cora Strauch Fotografie</h1>
 
     {{ modules.imageMosaic.imageMosaic (
     space = 'mod-space',

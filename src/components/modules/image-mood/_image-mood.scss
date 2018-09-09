@@ -1,3 +1,21 @@
 .image-mood {
     @extend %content-reset;
+
+    position: relative;
+}
+
+.image-mood__image img {
+    display: block;
+}
+
+.image-mood__headline {
+    text-shadow: 2px 2px $color-shadow;
+    color: $color-text-reverse;
+    position: absolute;
+    left: 30px;
+    bottom: 0;
+
+    @include breakpoint(large) {
+        left: 120px;
+    }
 }
