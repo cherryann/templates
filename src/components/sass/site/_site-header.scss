@@ -27,5 +27,17 @@
 
 .site-header__logo {
     text-align: center;
-    margin-bottom: 30px;
+}
+
+.site-header__logo + .site-header__navigation {
+    margin-top: 30px;
+}
+
+.site-header__logo-image {
+    width: 200px;
+    display: inline-block;
+
+    @include breakpoint(medium) {
+        width: 400px;
+    }
 }

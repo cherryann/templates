@@ -1,23 +1,35 @@
 .content-triple {
-    @include grid(
-        $col-class: content-triple__col,
-        $col-width: (
-            default: 100%,
-            medium: 33.33%
-        )
-    );
-}
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 4%;
 
-.content-triple img {
-    @extend %img-responsive;
+    @include breakpoint(large) {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @include breakpoint(xlarge) {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 }
 
 .content-triple__col {
-    @include breakpoint(default, $inherit: medium) {
+    @include breakpoint(default, $inherit: large) {
         margin-bottom: 30px;
 
         &:last-child {
             margin-bottom: 0;
+        }
+    }
+
+    @include breakpoint(large) {
+        &:last-child {
+            grid-column: auto / span 2;
+        }
+    }
+
+    @include breakpoint(xlarge) {
+        &:last-child {
+            grid-column: auto;
         }
     }
 }

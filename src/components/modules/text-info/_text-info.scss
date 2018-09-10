@@ -1,0 +1,7 @@
+.text-info {
+    max-width: 100%;
+
+    @include breakpoint(medium) {
+        max-width: 80%;
+    }
+}

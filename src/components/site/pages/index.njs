@@ -84,16 +84,16 @@
                 aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
                 kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
                 <a href="#" class="link-primary">Link primary as anchor</a>',
-    contentMiddle = '<img src="http://placehold.it/600x800" />',
-    contentRight = '<img src="http://placehold.it/600x800" />'
+    contentMiddle = '<img src="http://placehold.it/600x800" class="img-responsive" />',
+    contentRight = '<img src="http://placehold.it/600x800" class="img-responsive" />'
     )
     }}
 
     {{ modules.contentTriple.contentTriple (
     space = 'mod-space--large',
-    contentLeft = '<img src="http://placehold.it/600x800" />',
-    contentMiddle = '<img src="http://placehold.it/600x800" />',
-    contentRight = '<img src="http://placehold.it/600x800" />'
+    contentLeft = '<img src="http://placehold.it/600x800" class="img-responsive" />',
+    contentMiddle = '<img src="http://placehold.it/600x800" class="img-responsive" />',
+    contentRight = '<img src="http://placehold.it/600x800" class="img-responsive" />'
     )
     }}
 
@@ -146,7 +146,7 @@
     space = 'mod-space',
     content = '<div class="image-mosaic__content"><img src="http://placehold.it/600x400" class="image-mosaic__image" /></div>
             <div class="image-mosaic__content"><img src="http://placehold.it/400x600" class="image-mosaic__image" /></div>
-            <div class="image-mosaic__content"><img src="http://placehold.it/1200x800" class="image-mosaic__image" /></div>
+            <div class="image-mosaic__content"><img src="http://placehold.it/3200x1200" class="image-mosaic__image" /></div>
             <div class="image-mosaic__content"><img src="http://placehold.it/300x600" class="image-mosaic__image" /></div>
             <div class="image-mosaic__content"><img src="http://placehold.it/400x600" class="image-mosaic__image" /></div>
             <div class="image-mosaic__content"><img src="http://placehold.it/3000x1200" class="image-mosaic__image" /></div>
@@ -174,13 +174,53 @@
         mailAddress = '1',
         instagramUser = '1',
         infoTextTwitter = 'Lorem ipsum dolor sit
-                amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
-                kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.',
+                amet, consetetur sadipscing elitr.',
         infoTextFacebook = '1',
         infoTextInstagram = '1',
         infoTextPhone = '1',
         infoTextMail = '1'
+    ) }}
+
+    <h3 class="headline-h3">text-info</h3>
+    {{ modules.textInfo.textInfo(
+        space = 'mod-space',
+        text = '<p class="headline-h1">
+            Lorem ipsum dolor sit amet
+        </p>
+        <p class="text-copy">
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, <strong class="text-copy--bold">sed diam nonumy eirmod</strong>
+            sed diam nonumy eirmod tempor invidunt ut labore
+            et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+            Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
+            amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
+            aliquyam erat, sed diam voluptua. At vero eos <a href="#" class="link-primary">At vero eos et accusam</a>
+            et accusam et justo duo dolores et ea rebum. Stet clita
+            kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+        </p>
+        <p class="headline-h6">
+            Lorem ipsum dolor sit amet
+        </p>
+        <p class="text-copy">
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
+            et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+            Stet clita kasd gubergren, <strong class="text-copy--bold">sed diam nonumy eirmod</strong> no sea takimata
+            sanctus est <a href="#" class="link-primary"> At vero eos et accusam</a> Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
+            amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
+            aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
+            kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+        </p>
+        <ul class="list-bullet"><li>List 1</li><li>List 2</li><li>List 3</li><li>List 4</li><li>List 5</li><li>List 6</li></ul>
+        <p class="text-copy">
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, <strong class="text-copy--bold">sed diam nonumy eirmod</strong>
+            sed diam nonumy eirmod tempor invidunt ut labore
+            et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+            Stet clita kasd gubergren, no sea takimata <a href="#" class="link-secondary">At vero eos et accusam</a> sanctus est
+            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
+            amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
+            aliquyam erat, sed diam voluptua. At vero eos <a href="#" class="link-primary">At vero eos et accusam</a>
+            et accusam et justo duo dolores et ea rebum. Stet clita
+            kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+        </p>'
     ) }}
 
 {% endblock %}

@@ -14,4 +14,8 @@
         display: inline-block;
         margin: 0 10px 15px;
     }
+
+    a {
+        color: $color-text-reverse;
+    }
 }

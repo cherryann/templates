@@ -27,15 +27,13 @@
         transition: 0.5s all;
     }
 
-    &:hover,
-    &:focus {
+    &:hover {
         path {
             fill: $color-social-hover;
         }
     }
 
-    &:hover .social-media__tooltip,
-    &:focus .social-media__tooltip {
+    &:hover .social-media__tooltip {
         visibility: visible;
         opacity: 1;
         top: -15px;
@@ -64,10 +62,14 @@
         color: $color-text-reverse;
         visibility: hidden;
         opacity: 0;
-        width: 200px;
+        width: 100px;
         transform: translate(-50%, -100%);
         transition: all 0.5s ease-out;
         border-radius: 5px;
+
+        @include breakpoint(large) {
+            width: 200px;
+        }
 
         &:before {
             position: absolute;

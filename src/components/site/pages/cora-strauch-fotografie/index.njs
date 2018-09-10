@@ -15,14 +15,14 @@
     <meta name="twitter:title" content="Cora Strauch  Fotografie - Was zählt ist der Moment.">
     <meta name="twitter:description" content="Cora Strauch  Fotografie - Was zählt ist der Moment.">
     <meta name="twitter:card" content="summary_large_image">
-    <meta property="og:url" content="">
-    <meta property="og:title" content="">
+    <meta property="og:url" content="SEITENURL">
+    <meta property="og:title" content="Cora Strauch  Fotografie - Was zählt ist der Moment.">
     <meta property="og:description" content="Cora Strauch  Fotografie - Was zählt ist der Moment.">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="de_DE">
-    <meta property="og:site_name" content="">
-    <meta name="twitter:image" content="">
-    <meta property="og:image" content="">
+    <meta property="og:site_name" content="Cora Strauch  Fotografie - Was zählt ist der Moment.">
+    <meta name="twitter:image" content="/images/1532646286.png">
+    <meta property="og:image" content="/images/1532646286.png">
 {% endblock %}
 
 {% block cssStyle %}
@@ -31,15 +31,13 @@
 
 {% block navigation %}
     {{ siteHeader.siteHeader(
-    content = '<li><a href="#">HOME1</a></li>
-            <li><a href="#">LINK 1</a></li>
-            <li><a href="#">LINK 2</a></li>
-            <li><a href="#">LINK 3</a></li>'
+    logo = '<img src="/images/1532646286.png" class="img-responsive" />'
     ) }}
 {% endblock %}
 
 {% block content %}
     {{ modules.imageMood.imageMood (
+        space = 'mod-space',
         headline = '<h1 class="headline-h1">Moments - Cora Strauch Fotografie</h1>',
         image = '<img src="http://placehold.it/1600x400"
                  srcset="http://placehold.it/1600x400 300w"
@@ -49,30 +47,40 @@
             />'
     )}}
 
-    {{ modules.imageMosaic.imageMosaic (
-    space = 'mod-space',
-    content = '<div class="image-mosaic__content"><img src="http://placehold.it/600x400" class="image-mosaic__image" /></div>
-            <div class="image-mosaic__content"><img src="http://placehold.it/400x600" class="image-mosaic__image" /></div>
-            <div class="image-mosaic__content"><img src="http://placehold.it/300x600" class="image-mosaic__image" /></div>
-            <div class="image-mosaic__content"><img src="http://placehold.it/300x600" class="image-mosaic__image" /></div>
-            <div class="image-mosaic__content"><img src="http://placehold.it/400x600" class="image-mosaic__image" /></div>
-            <div class="image-mosaic__content"><img src="http://placehold.it/400x600" class="image-mosaic__image" /></div>
-            <div class="image-mosaic__content"><img src="http://placehold.it/600x400" class="image-mosaic__image" /></div>'
-    )
-    }}
-
     {{ modules.textHighlight.textHighlight (
-    space = 'mod-space--large',
+    space = 'mod-space',
     text = 'Welches meiner Fotos ich am liebsten mag? <br /> Das was ich Morgen machen werde!',
     background = '/images/1530719388.jpg' )
     }}
 
-    {{ modules.imageText.imageText(
+    {{ modules.imageMosaic.imageMosaic (
     space = 'mod-space',
-    contentLeft = '<img src="http://placehold.it/300x200"
-                 srcset="http://placehold.it/300x200 300w"
-                 sizes="100vw"
-                 alt="Placeholder"
+    content = '<div class="image-mosaic__content"><img src="/images/01.jpg" class="image-mosaic__image" /></div>
+            <div class="image-mosaic__content"><img src="/images/02.jpg" class="image-mosaic__image" /></div>
+            <div class="image-mosaic__content"><img src="/images/03.jpg" class="image-mosaic__image" /></div>
+            <div class="image-mosaic__content"><img src="/images/04.jpg" class="image-mosaic__image" /></div>
+            <div class="image-mosaic__content"><img src="/images/05.jpg" class="image-mosaic__image" /></div>
+            <div class="image-mosaic__content"><img src="/images/06.jpg" class="image-mosaic__image" /></div>
+            <div class="image-mosaic__content"><img src="/images/07.jpg" class="image-mosaic__image" /></div>
+            <div class="image-mosaic__content"><img src="/images/08.jpg" class="image-mosaic__image" /></div>
+            <div class="image-mosaic__content"><img src="/images/09.jpg" class="image-mosaic__image" /></div>
+            <div class="image-mosaic__content"><img src="/images/10.jpg" class="image-mosaic__image" /></div>
+            <div class="image-mosaic__content"><img src="/images/11.jpg" class="image-mosaic__image" /></div>
+            <div class="image-mosaic__content"><img src="/images/12.jpg" class="image-mosaic__image" /></div>
+            <div class="image-mosaic__content"><img src="/images/13.jpg" class="image-mosaic__image" /></div>
+            <div class="image-mosaic__content"><img src="/images/14.jpg" class="image-mosaic__image" /></div>'
+    )
+    }}
+
+    {{ modules.textHighlight.textHighlight (
+    space = 'mod-space',
+    text = 'Was zählt ist der Moment',
+    background = '/images/1530719388.jpg' )
+    }}
+
+    {{ modules.imageText.imageText(
+    space = 'mod-space--large',
+    contentLeft = '<img src="/images/16.jpg"
                  class="img-responsive"
             />',
     contentRight = '<h2 class="headline-h3">Über mich</h2><p class="text-copy">
@@ -90,55 +98,28 @@
     ) }}
 
     {{ modules.socialMedia.socialMedia(
-        space = 'mod-space--large',
+        space = 'mod-space',
         phoneNumber = '01712373225',
         mailAddress = 'corastrauch@gmx.de',
         instagramUser = 'corastrauchfotografie',
         infoTextInstagram = 'Schau dir meine neusten Fotos auf Instagram an!',
         infoTextPhone = 'Interesse geweckt? Ich freue mich von dir zu hören.',
-        infoTextMail = 'Interesse geweckt? Ich freue mich über deine Nachricht!'
-    ) }}
-
-
-
-    {{ modules.contactInfo.contactInfo (
-    space = 'mod-space',
-    text = '<h3 class="headline-h3">Kontakt</h3>
-            <p class="text-copy">Cora Strauch<br />
-            52525 Heinsberg<br />
-            Cora Strauch@gmx.de<br />
-            Telefon: 01712373225</p>',
-    iframeSrc = 'https://www.openstreetmap.org/export/embed.html?bbox=5.977760776877404%2C51.01488777835605%2C6.22306488454342%2C51.109287441033736&amp;layer=mapnik&amp;marker=51.06211167114368%2C6.100412830710411',
-    previewUrl = 'https://www.openstreetmap.org/?mlat=51.0621&amp;mlon=6.1004#map=13/51.0621/6.1004s'
-    )
-    }}
-
-    {{ modules.textHighlight.textHighlight (
-        space = 'mod-space',
-        text = 'Was zählt ist der Moment',
-        background = '/images/1530719388.jpg' )
-    }}
-
-    {{ modules.socialMedia.socialMedia(
-        space = 'mod-space',
-        twitterUrl = '1',
-        twitterText = '1',
-        facebookUrl = '1',
-        phoneNumber = '01712373225',
-        mailAddress = 'corastrauch@gmx.de',
+        infoTextMail = 'Interesse geweckt? Ich freue mich über deine Nachricht!',
+        twitterUrl = 'SEITENURL',
+        twitterText = 'Halte den Moment fest bei Cora Strauch Fotografie',
+        facebookUrl = 'SEITENURL',
         instagramUser = 'corastrauchfotografie',
         infoTextTwitter = 'Teile meine Seite bei twitter',
         infoTextFacebook = 'Teile meine Seite bei facebook',
-        infoTextInstagram = 'Schau dir meine neusten Fotos bei Instagram an',
-        infoTextPhone = 'Ich freue mich von dir zu hören!',
-        infoTextMail = 'Ich freue mich über deine Nachricht!'
+        infoTextInstagram = 'Schau dir meine neusten Fotos bei Instagram an'
     ) }}
+
 {% endblock %}
 
 {% block footer %}
     {{ siteFooter.siteFooter(
-    content = '<li><a href="#">Link 1</a></li>
-            <li><a href="#">Link 2</a></li>
-            <li><a href="#">Link 3</a></li>'
+    content = '<li><a href="impressum.html">Impressum</a></li>
+            <li><a href="datenschutz.html">Datenschutz</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>'
     ) }}
 {% endblock %}
