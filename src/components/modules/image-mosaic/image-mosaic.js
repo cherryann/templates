@@ -17,6 +17,7 @@
             module: '.image-mosaic',
             gridItem: '.image-mosaic__content',
             contentItem: '.image-mosaic__image',
+            contentMosaic: '.image-mosaic__grid',
             modal: '.image-mosaic__modal',
             modalClose: '.image-mosaic__modal-backdrop, .image-mosaic__modal-close, .image-mosaic__modal-window',
             modalOpen: 'image-mosaic__modal-open',
@@ -27,12 +28,17 @@
         ready: function( element, options ) {
             this.element = $( element );
             this.options = $.extend( this.defaults, options );
+            var that = this;
 
-            this.initMosaic();
+            this.fileLoad();
 
-            if ( this.options.showModal === true ) {
-                this.initModal();
-            }
+            setTimeout( function() {
+                that.initMosaic();
+
+                if ( that.options.showModal === true ) {
+                    that.initModal();
+                }
+            }, 100 );
         },
 
         initMosaic: function() {
@@ -65,6 +71,31 @@
                 $( that.options.modal ).addClass( that.options.helper );
                 $( 'body' ).removeClass( that.options.modalOpen );
             } );
+        },
+
+        fileLoad: function() {
+            var dir = this.options.content;
+            var fileextension = 'jpg|png|gif';
+            var that = this;
+
+            var allExtensions = fileextension.split('|');
+
+            $.ajax( {
+                url: dir,
+                success: function( data ) {
+                    for (var i = 0; i < allExtensions.length; i++) {
+                        $( data ).find( 'a:contains(' + allExtensions[i] + ')' ).each( function() {
+                            var filename = this.href.replace( window.location.href, '' );
+
+                            var image = '<div class="image-mosaic__content"><img src="' + dir + filename + '" ' +
+                                'class="image-mosaic__image"></div>';
+
+                            $( that.options.contentMosaic ).append( image );
+                        } );
+                    }
+                }
+            } );
+
         },
 
         events: function( element, options ) {

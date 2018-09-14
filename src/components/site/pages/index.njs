@@ -144,13 +144,7 @@
     <h3 class="headline-h3">image-mosaic</h3>
     {{ modules.imageMosaic.imageMosaic (
     space = 'mod-space',
-    content = '<div class="image-mosaic__content"><img src="http://placehold.it/600x400" class="image-mosaic__image" /></div>
-            <div class="image-mosaic__content"><img src="http://placehold.it/400x600" class="image-mosaic__image" /></div>
-            <div class="image-mosaic__content"><img src="http://placehold.it/3200x1200" class="image-mosaic__image" /></div>
-            <div class="image-mosaic__content"><img src="http://placehold.it/300x600" class="image-mosaic__image" /></div>
-            <div class="image-mosaic__content"><img src="http://placehold.it/400x600" class="image-mosaic__image" /></div>
-            <div class="image-mosaic__content"><img src="http://placehold.it/3000x1200" class="image-mosaic__image" /></div>
-            <div class="image-mosaic__content"><img src="http://placehold.it/600x400" class="image-mosaic__image" /></div>'
+    content = '../images/image-mosaic/'
     )
     }}
 

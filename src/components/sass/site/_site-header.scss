@@ -23,6 +23,10 @@
         display: inline-block;
         margin: 0 15px 15px;
     }
+
+    a {
+        color: $color-text-header;
+    }
 }
 
 .site-header__logo {

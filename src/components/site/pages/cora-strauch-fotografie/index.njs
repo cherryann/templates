@@ -6,7 +6,12 @@
 {% block pageTitle %}Cora Strauch  Fotografie - Was zählt ist der Moment.{% endblock %}
 
 {% block favicon %}
-    {#<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">#}
+    <link rel="apple-touch-icon" sizes="152x152" href="/images/cora-strauch-fotografie/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/cora-strauch-fotografie/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/cora-strauch-fotografie/favicon-16x16.png">
+    <link rel="manifest" href="/images/cora-strauch-fotografie/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
 {% endblock %}
 
 {% block metaTags %}
@@ -21,8 +26,8 @@
     <meta property="og:type" content="website">
     <meta property="og:locale" content="de_DE">
     <meta property="og:site_name" content="Cora Strauch  Fotografie - Was zählt ist der Moment.">
-    <meta name="twitter:image" content="/images/1532646286.png">
-    <meta property="og:image" content="/images/1532646286.png">
+    <meta name="twitter:image" content="/images/cora-strauch-fotografie/1532646286.png">
+    <meta property="og:image" content="/images/cora-strauch-fotografie/1532646286.png">
 {% endblock %}
 
 {% block cssStyle %}
@@ -31,7 +36,10 @@
 
 {% block navigation %}
     {{ siteHeader.siteHeader(
-    logo = '<img src="/images/1532646286.png" class="img-responsive" />'
+    logo = '<img src="/images/cora-strauch-fotografie/1532646286.png" class="img-responsive" />',
+    content = '<li><a href="/">Startseite</a></li>
+            <li><a href="#">Gallerie</a></li>
+            <li><a href="#">Über mich</a></li>'
     ) }}
 {% endblock %}
 
@@ -50,37 +58,24 @@
     {{ modules.textHighlight.textHighlight (
     space = 'mod-space',
     text = 'Welches meiner Fotos ich am liebsten mag? <br /> Das was ich Morgen machen werde!',
-    background = '/images/1530719388.jpg' )
+    background = '/images/cora-strauch-fotografie/1530719388.jpg' )
     }}
 
     {{ modules.imageMosaic.imageMosaic (
     space = 'mod-space',
-    content = '<div class="image-mosaic__content"><img src="/images/01.jpg" class="image-mosaic__image" /></div>
-            <div class="image-mosaic__content"><img src="/images/02.jpg" class="image-mosaic__image" /></div>
-            <div class="image-mosaic__content"><img src="/images/03.jpg" class="image-mosaic__image" /></div>
-            <div class="image-mosaic__content"><img src="/images/04.jpg" class="image-mosaic__image" /></div>
-            <div class="image-mosaic__content"><img src="/images/05.jpg" class="image-mosaic__image" /></div>
-            <div class="image-mosaic__content"><img src="/images/06.jpg" class="image-mosaic__image" /></div>
-            <div class="image-mosaic__content"><img src="/images/07.jpg" class="image-mosaic__image" /></div>
-            <div class="image-mosaic__content"><img src="/images/08.jpg" class="image-mosaic__image" /></div>
-            <div class="image-mosaic__content"><img src="/images/09.jpg" class="image-mosaic__image" /></div>
-            <div class="image-mosaic__content"><img src="/images/10.jpg" class="image-mosaic__image" /></div>
-            <div class="image-mosaic__content"><img src="/images/11.jpg" class="image-mosaic__image" /></div>
-            <div class="image-mosaic__content"><img src="/images/12.jpg" class="image-mosaic__image" /></div>
-            <div class="image-mosaic__content"><img src="/images/13.jpg" class="image-mosaic__image" /></div>
-            <div class="image-mosaic__content"><img src="/images/14.jpg" class="image-mosaic__image" /></div>'
+    content = '../images/cora-strauch-fotografie/image-mosaic/'
     )
     }}
 
     {{ modules.textHighlight.textHighlight (
     space = 'mod-space',
     text = 'Was zählt ist der Moment',
-    background = '/images/1530719388.jpg' )
+    background = '/images/cora-strauch-fotografie/1530719388.jpg' )
     }}
 
     {{ modules.imageText.imageText(
     space = 'mod-space--large',
-    contentLeft = '<img src="/images/16.jpg"
+    contentLeft = '<img src="/images/cora-strauch-fotografie/image-mosaic/16.jpg"
                  class="img-responsive"
             />',
     contentRight = '<h2 class="headline-h3">Über mich</h2><p class="text-copy">
