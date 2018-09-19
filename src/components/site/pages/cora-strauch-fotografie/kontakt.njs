@@ -6,7 +6,12 @@
 {% block pageTitle %}Cora Strauch  Fotografie - Was zählt ist der Moment.{% endblock %}
 
 {% block favicon %}
-    {#<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">#}
+    <link rel="apple-touch-icon" sizes="152x152" href="/images/cora-strauch-fotografie/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/cora-strauch-fotografie/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/cora-strauch-fotografie/favicon-16x16.png">
+    <link rel="manifest" href="/images/cora-strauch-fotografie/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
 {% endblock %}
 
 {% block metaTags %}
@@ -21,8 +26,8 @@
     <meta property="og:type" content="website">
     <meta property="og:locale" content="de_DE">
     <meta property="og:site_name" content="Cora Strauch  Fotografie - Was zählt ist der Moment.">
-    <meta name="twitter:image" content="/images/1532646286.png">
-    <meta property="og:image" content="/images/1532646286.png">
+    <meta name="twitter:image" content="/images/cora-strauch-fotografie/1532646286.png">
+    <meta property="og:image" content="/images/cora-strauch-fotografie/1532646286.png">
 {% endblock %}
 
 {% block cssStyle %}
@@ -31,7 +36,7 @@
 
 {% block navigation %}
     {{ siteHeader.siteHeader(
-    logo = '<img src="/images/1532646286.png" class="img-responsive" />'
+    logo = '<img src="/images/cora-strauch-fotografie/1532646286.png" class="img-responsive" />'
     ) }}
 {% endblock %}
 
@@ -39,7 +44,7 @@
     {{ modules.imageMood.imageMood (
         space = 'mod-space--large',
         headline = '<h1 class="headline-h1">Kontakt</h1>',
-        image = '<img src="/images/15.jpg"
+        image = '<img src="/images/cora-strauch-fotografie/image-mosaic/15.jpg"
                  class="img-responsive"
             />'
     )}}

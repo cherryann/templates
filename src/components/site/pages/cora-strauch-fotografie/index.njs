@@ -36,30 +36,20 @@
 
 {% block navigation %}
     {{ siteHeader.siteHeader(
-    logo = '<img src="/images/cora-strauch-fotografie/1532646286.png" class="img-responsive" />',
-    content = '<li><a href="/">Startseite</a></li>
-            <li><a href="#">Gallerie</a></li>
-            <li><a href="#">Über mich</a></li>'
+    logo = '<img src="/images/cora-strauch-fotografie/1532646286.png" class="img-responsive" />'
     ) }}
 {% endblock %}
 
 {% block content %}
-    {{ modules.imageMood.imageMood (
-        space = 'mod-space',
-        headline = '<h1 class="headline-h1">Moments - Cora Strauch Fotografie</h1>',
-        image = '<img src="http://placehold.it/1600x400"
-                 srcset="http://placehold.it/1600x400 300w"
-                 sizes="100vw"
-                 alt="Placeholder"
-                 class="img-responsive"
-            />'
-    )}}
-
     {{ modules.textHighlight.textHighlight (
     space = 'mod-space',
     text = 'Welches meiner Fotos ich am liebsten mag? <br /> Das was ich Morgen machen werde!',
     background = '/images/cora-strauch-fotografie/1530719388.jpg' )
     }}
+
+    <div class="mod-space">
+        <h1 class="headline-h1">Moments - Cora Strauch Fotografie</h1>
+    </div>
 
     {{ modules.imageMosaic.imageMosaic (
     space = 'mod-space',

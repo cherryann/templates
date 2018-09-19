@@ -78,14 +78,21 @@
             var fileextension = 'jpg|png|gif';
             var that = this;
 
-            var allExtensions = fileextension.split('|');
+            var allExtensions = fileextension.split( '|' );
 
             $.ajax( {
                 url: dir,
                 success: function( data ) {
-                    for (var i = 0; i < allExtensions.length; i++) {
-                        $( data ).find( 'a:contains(' + allExtensions[i] + ')' ).each( function() {
-                            var filename = this.href.replace( window.location.href, '' );
+                    /* jshint ignore:start */
+                    for ( var i = 0; i < allExtensions.length; i++ ) {
+                        $( data ).find( 'a:contains(' + allExtensions[ i ] + ')' ).each( function() {
+
+                            var filename = '';
+                            if ( window.location.pathname ) {
+                                filename = this.href.replace( window.location.origin + window.location.pathname, '' );
+                            } else {
+                                filename = this.href.replace( window.location.href, '' );
+                            }
 
                             var image = '<div class="image-mosaic__content"><img src="' + dir + filename + '" ' +
                                 'class="image-mosaic__image"></div>';
@@ -93,6 +100,7 @@
                             $( that.options.contentMosaic ).append( image );
                         } );
                     }
+                    /* jshint ignore:end */
                 }
             } );
 

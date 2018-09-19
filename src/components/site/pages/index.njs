@@ -9,7 +9,7 @@
     {{ siteHeader.siteHeader(
     space = 'mod-space',
     content = '<li><a href="#">HOME</a></li>
-            <li><a href="#">LINK 1</a></li>
+            <li><a href="#contentTriple">LINK 1</a></li>
             <li><a href="#">LINK 2</a></li>
             <li><a href="#">LINK 3</a></li>'
     ) }}
@@ -75,6 +75,7 @@
     <h3 class="headline-h3">content-triple</h3>
     {{ modules.contentTriple.contentTriple (
     space = 'mod-space',
+    scrollAnchor = 'contentTriple',
     contentLeft = '<h4 class="headline-h4">headline</h4> <p class="text-copy">Lorem ipsum dolor sit
                 amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
                 aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
