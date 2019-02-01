@@ -72,6 +72,20 @@
         <a href="/" class="button-secondary disabled">Button secondary as a disabled class</a>
     </div>
 
+    <div class="text-center text-info mod-center mod-space">
+        <h1 class="headline-h1">404</h1>
+        <p class="text-copy">
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
+            et dolore magna aliquyam <strong class="text-copy--bold">sed diam nonumy eirmod</strong> erat, sed diam voluptua.
+            At vero eos et accusam et justo duo dolores et ea rebum.
+            Stet clita kasd gubergren, no sea Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
+            amet, consetetur sadipscing elitr, tempor invidunt ut labore et dolore magna
+            aliquyam erat, sed diam voluptua. <a href="#" class="link-primary">At vero eos et accusam</a> et justo duo dolores et ea rebum. Stet clita
+            kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+        </p>
+        <a href="#" class="button-primary">Button primary as anchor</a>
+    </div>
+
     <h3 class="headline-h3">content-triple</h3>
     {{ modules.contentTriple.contentTriple (
     space = 'mod-space',

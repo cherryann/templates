@@ -4,8 +4,10 @@
     define( [
     'jquery',
     'vendor/isotope',
-    'vendor/imagesLoaded'
-	], function( $, Isotope, imagesLoaded ) {
+    'vendor/imagesLoaded',
+    'utils/event',
+    'utils/breakpoints'
+	], function( $, Isotope, imagesLoaded, Event, Breakpoints ) {
 
     return {
 
@@ -22,23 +24,40 @@
             modalClose: '.image-mosaic__modal-backdrop, .image-mosaic__modal-close, .image-mosaic__modal-window',
             modalOpen: 'image-mosaic__modal-open',
             helper: 'hidden',
-            showModal: true
+            showModal: true,
+            contentPath: false
         },
 
         ready: function( element, options ) {
             this.element = $( element );
             this.options = $.extend( this.defaults, options );
+            var breakpoint = Breakpoints.get();
             var that = this;
 
-            this.fileLoad();
+            if ( this.options.contentPath ) {
+                this.fileLoad();
 
-            setTimeout( function() {
+                setTimeout( function() {
+                    that.initMosaic();
+
+                    if ( that.options.showModal === true &&
+                        breakpoint !== 'xsmall' &&
+                        breakpoint !== 'small'  ) {
+                        that.initModal();
+                    }
+                }, 100 );
+
+            } else {
+
                 that.initMosaic();
 
-                if ( that.options.showModal === true ) {
+                if ( that.options.showModal === true &&
+                    breakpoint !== 'xsmall' &&
+                    breakpoint !== 'small' ) {
                     that.initModal();
                 }
-            }, 100 );
+
+            }
         },
 
         initMosaic: function() {
@@ -74,7 +93,7 @@
         },
 
         fileLoad: function() {
-            var dir = this.options.content;
+            var dir = this.options.contentPath;
             var fileextension = 'jpg|png|gif';
             var that = this;
 
@@ -83,24 +102,23 @@
             $.ajax( {
                 url: dir,
                 success: function( data ) {
-                    /* jshint ignore:start */
                     for ( var i = 0; i < allExtensions.length; i++ ) {
-                        $( data ).find( 'a:contains(' + allExtensions[ i ] + ')' ).each( function() {
-
+                        var contentList = $( data ).find( 'a:contains(' + allExtensions[ i ] + ')' );
+                        for ( var j = 0; j < contentList.length; j++ ) {
                             var filename = '';
                             if ( window.location.pathname ) {
-                                filename = this.href.replace( window.location.origin + window.location.pathname, '' );
+                                filename = contentList[ j ].href.replace( window.location.origin +
+                                    window.location.pathname, '' );
                             } else {
-                                filename = this.href.replace( window.location.href, '' );
+                                filename = contentList[ j ].href.replace( window.location.href, '' );
                             }
 
                             var image = '<div class="image-mosaic__content"><img src="' + dir + filename + '" ' +
                                 'class="image-mosaic__image"></div>';
 
                             $( that.options.contentMosaic ).append( image );
-                        } );
+                        }
                     }
-                    /* jshint ignore:end */
                 }
             } );
 

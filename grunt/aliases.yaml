@@ -8,6 +8,9 @@ development:
         - 'copy:js'
         - 'copy:font'
         - 'copy:image'
+        - 'copy:skinJs'
+        - 'copy:skinFont'
+        - 'copy:skinImage'
         - 'nunjuckr:development'
 
 dev:

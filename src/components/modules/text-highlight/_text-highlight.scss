@@ -4,6 +4,7 @@
     color: $color-text;
     text-align: center;
     padding: 30px 60px;
+    background-color: $color-tower-gray;
 
     @include breakpoint(large) {
         padding: 120px;
@@ -11,15 +12,20 @@
 }
 
 .text-highlight--static-image {
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
+    @include breakpoint(medium) {
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
 }
 
 .text-highlight__text {
-    text-shadow: 2px 2px $color-shadow;
     color: $color-text-reverse;
+
+    @include breakpoint(medium) {
+        text-shadow: 2px 2px $color-shadow;
+    }
 
     @include font(
         $font-family: 'Satisfy',

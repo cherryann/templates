@@ -32,6 +32,35 @@ module.exports = {
             '**/*.png'
         ],
         dest: '<%= distPath %>images/'
+    },
+
+    skinImage: {
+        expand: true,
+        cwd: '<%= srcPath %>images/cora-strauch-fotografie',
+        src: [
+            '**/*.jpg',
+            '**/*.png'
+        ],
+        dest: '<%= distPath %>cora-strauch-fotografie/images'
+    },
+
+    skinFont: {
+        expand: true,
+        cwd: '<%= srcPath %>fonts/',
+        src: [
+            '**/*.woff2'
+        ],
+        dest: '<%= distPath %>cora-strauch-fotografie/fonts'
+    },
+
+    skinJs: {
+        expand: true,
+        cwd: '<%= srcPath %>components/',
+        src: [
+            '**/*.js',
+            '!**/*.spec.js'
+        ],
+        dest: '<%= distPath %>cora-strauch-fotografie/js'
     }
 
 };

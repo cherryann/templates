@@ -31,12 +31,15 @@
 {% endblock %}
 
 {% block cssStyle %}
-    <link rel="stylesheet" href="/css/skin.css">
+    <link rel="stylesheet" href="css/skin.css">
 {% endblock %}
 
 {% block navigation %}
     {{ siteHeader.siteHeader(
-    logo = '<img src="/images/cora-strauch-fotografie/1532646286.png" class="img-responsive" />'
+    logo = '<img src="/images/cora-strauch-fotografie/1532646286.png" class="img-responsive" />',
+    content = '<li><a href="/">Startseite</a></li>
+            <li><a href="#aboutMe">Über mich</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>'
     ) }}
 {% endblock %}
 
@@ -53,13 +56,29 @@
 
     {{ modules.imageMosaic.imageMosaic (
     space = 'mod-space',
-    content = '../images/cora-strauch-fotografie/image-mosaic/'
+    content = '<div class="image-mosaic__content"><img src="/images/cora-strauch-fotografie/image-mosaic/01.jpg" class="image-mosaic__image" /></div>
+    <div class="image-mosaic__content"><img src="/images/cora-strauch-fotografie/image-mosaic/02.jpg" class="image-mosaic__image" /></div>
+    <div class="image-mosaic__content"><img src="/images/cora-strauch-fotografie/image-mosaic/03.jpg" class="image-mosaic__image" /></div>
+    <div class="image-mosaic__content"><img src="/images/cora-strauch-fotografie/image-mosaic/04.jpg" class="image-mosaic__image" /></div>
+    <div class="image-mosaic__content"><img src="/images/cora-strauch-fotografie/image-mosaic/05.jpg" class="image-mosaic__image" /></div>
+    <div class="image-mosaic__content"><img src="/images/cora-strauch-fotografie/image-mosaic/06.jpg" class="image-mosaic__image" /></div>
+    <div class="image-mosaic__content"><img src="/images/cora-strauch-fotografie/image-mosaic/07.jpg" class="image-mosaic__image" /></div>
+    <div class="image-mosaic__content"><img src="/images/cora-strauch-fotografie/image-mosaic/08.jpg" class="image-mosaic__image" /></div>
+    <div class="image-mosaic__content"><img src="/images/cora-strauch-fotografie/image-mosaic/09.jpg" class="image-mosaic__image" /></div>
+    <div class="image-mosaic__content"><img src="/images/cora-strauch-fotografie/image-mosaic/10.jpg" class="image-mosaic__image" /></div>
+    <div class="image-mosaic__content"><img src="/images/cora-strauch-fotografie/image-mosaic/11.jpg" class="image-mosaic__image" /></div>
+    <div class="image-mosaic__content"><img src="/images/cora-strauch-fotografie/image-mosaic/12.jpg" class="image-mosaic__image" /></div>
+    <div class="image-mosaic__content"><img src="/images/cora-strauch-fotografie/image-mosaic/13.jpg" class="image-mosaic__image" /></div>
+    <div class="image-mosaic__content"><img src="/images/cora-strauch-fotografie/image-mosaic/14.jpg" class="image-mosaic__image" /></div>
+    <div class="image-mosaic__content"><img src="/images/cora-strauch-fotografie/image-mosaic/15.jpg" class="image-mosaic__image" /></div>
+    <div class="image-mosaic__content"><img src="/images/cora-strauch-fotografie/image-mosaic/16.jpg" class="image-mosaic__image" /></div>'
     )
     }}
 
     {{ modules.textHighlight.textHighlight (
     space = 'mod-space',
     text = 'Was zählt ist der Moment',
+    scrollAnchor = 'aboutMe',
     background = '/images/cora-strauch-fotografie/1530719388.jpg' )
     }}
 

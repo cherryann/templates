@@ -34,9 +34,11 @@
     }
 
     &:hover .social-media__tooltip {
-        visibility: visible;
-        opacity: 1;
-        top: -15px;
+        @include breakpoint(large) {
+            visibility: visible;
+            opacity: 1;
+            top: -15px;
+        }
     }
 
     .social-media__tooltip {

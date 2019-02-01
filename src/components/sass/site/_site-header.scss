@@ -1,8 +1,12 @@
 .site-header {
     padding: 30px 30px 15px;
-    margin: 0;
+    margin-bottom: 20px;
     background: $color-back-header;
     box-sizing: border-box;
+
+    @include breakpoint(medium) {
+        margin: 0;
+    }
 
     @include breakpoint(large) {
         padding: 30px 120px 15px;

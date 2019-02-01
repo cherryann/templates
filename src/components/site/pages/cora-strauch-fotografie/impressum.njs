@@ -31,7 +31,7 @@
 {% endblock %}
 
 {% block cssStyle %}
-    <link rel="stylesheet" href="/css/skin.css">
+    <link rel="stylesheet" href="css/skin.css">
 {% endblock %}
 
 {% block navigation %}

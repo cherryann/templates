@@ -6,10 +6,10 @@
 {% block pageTitle %}Cora Strauch  Fotografie - Was zählt ist der Moment.{% endblock %}
 
 {% block favicon %}
-    <link rel="apple-touch-icon" sizes="152x152" href="/images/cora-strauch-fotografie/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/images/cora-strauch-fotografie/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/images/cora-strauch-fotografie/favicon-16x16.png">
-    <link rel="manifest" href="/images/cora-strauch-fotografie/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="152x152" href="images/cora-strauch-fotografie/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/cora-strauch-fotografie/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/cora-strauch-fotografie/favicon-16x16.png">
+    <link rel="manifest" href="images/cora-strauch-fotografie/site.webmanifest">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
 {% endblock %}
@@ -31,12 +31,15 @@
 {% endblock %}
 
 {% block cssStyle %}
-    <link rel="stylesheet" href="/css/skin.css">
+    <link rel="stylesheet" href="css/skin.css">
 {% endblock %}
 
 {% block navigation %}
     {{ siteHeader.siteHeader(
-    logo = '<img src="/images/cora-strauch-fotografie/1532646286.png" class="img-responsive" />'
+    logo = '<img src="/images/cora-strauch-fotografie/1532646286.png" class="img-responsive" />',
+    content = '<li><a href="/">Startseite</a></li>
+            <li><a href="#aboutMe">Über mich</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>'
     ) }}
 {% endblock %}
 

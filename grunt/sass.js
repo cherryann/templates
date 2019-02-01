@@ -13,7 +13,7 @@ module.exports = {
         },
         files: {
             '<%= distPath %>css/main.css': '<%= srcPath %>components/sass/main.scss',
-            '<%= distPath %>css/skin.css': '<%= srcPath %>components/sass/skin.scss'
+            '<%= distPath %>cora-strauch-fotografie/css/skin.css': '<%= srcPath %>components/sass/skin.scss'
         }
     },
     production: {

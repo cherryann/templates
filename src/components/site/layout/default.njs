@@ -55,7 +55,7 @@
             ) }}
         {% endblock %}
 
-        <main class="site-main">
+        <main class="site-main mod-center--vertical">
             {% block content %}
             {% endblock %}
         </main>
