@@ -1,5 +1,6 @@
 {% macro siteHeader( content = '', logo = '', space = '', invert = '' ) %}
-<header class="site-header {% if space %}{{ space }}{% endif %}{% if invert %}{{ invert }}{% endif %}">
+<header class="site-header auto-init {% if space %}{{ space }}{% endif %}{% if invert %}{{ invert }}{% endif %}"
+        data-module="site/site-header">
     <nav>
         {% if logo %}
         <div class="site-header__logo">

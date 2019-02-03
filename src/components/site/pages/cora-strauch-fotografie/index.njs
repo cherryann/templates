@@ -78,12 +78,12 @@
     {{ modules.textHighlight.textHighlight (
     space = 'mod-space',
     text = 'Was zählt ist der Moment',
-    scrollAnchor = 'aboutMe',
     background = '/images/cora-strauch-fotografie/1530719388.jpg' )
     }}
 
     {{ modules.imageText.imageText(
     space = 'mod-space--large',
+    scrollAnchor = 'aboutMe',
     contentLeft = '<img src="/images/cora-strauch-fotografie/image-mosaic/16.jpg"
                  class="img-responsive"
             />',

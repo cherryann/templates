@@ -16,7 +16,7 @@
             var imageSrc = element.getAttribute( 'data-image-src' );
             var breakpoint = Breakpoints.get();
 
-            if ( breakpoint !== 'xsmall' && breakpoint !== 'small' ) {
+            if ( breakpoint !== 'default' && breakpoint !== 'xsmall' && breakpoint !== 'small' ) {
                 element.style.backgroundImage = 'url(\'' + imageSrc + '\')';
             } else {
                 element.style.backgroundImage = 'none';
@@ -27,7 +27,7 @@
             Event.on( 'Breakpoint/change', function( e, breakpoint ) {
                 var imageSrc = element.getAttribute( 'data-image-src' );
 
-                if ( breakpoint !== 'xsmall' && breakpoint !== 'small' ) {
+                if ( breakpoint !== 'default' && breakpoint !== 'xsmall' && breakpoint !== 'small' ) {
                     element.style.backgroundImage = 'url(\'' + imageSrc + '\')';
                 } else {
                     element.style.backgroundImage = '';
